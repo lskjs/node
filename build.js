@@ -2,6 +2,8 @@ const { images, buildDir } = require('./config');
 const fs = require('fs');
 const { execSync } = require('child_process');
 
+execSync(`rm -rf ${buildDir}`);
+
 images.forEach(({ name, versions, template }) => {
   versions.forEach((version) => {
     const dockerfile = template({ version });
