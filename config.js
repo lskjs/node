@@ -21,7 +21,7 @@ module.exports = {
         '19.3.0',
         '19.3.0-alpine',
         'latest',
-        'latest-alpine',
+        // 'latest-alpine',
       ],
     },
     {
