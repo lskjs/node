@@ -17,7 +17,8 @@ module.exports = {
       versions: [
         // '15.8.0',
         // '17.4.0',
-        // '18.10.0-alpine',
+        '18.10.0',
+        '18.10.0-alpine',
         '19.3.0',
         '19.3.0-alpine',
         'latest',
@@ -29,6 +30,7 @@ module.exports = {
       template: require('./templates/puppeteer-nodejs'),
       versions: [
         // '15.8.0', '17.4.0',
+        '18.10.0',
         '19.3.0',
         'latest',
       ],
