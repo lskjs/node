@@ -27,7 +27,17 @@ module.exports = {
     },
     {
       name: 'lskjs/puppeteer-nodejs',
-      template: require('./templates/puppeteer-nodejs'),
+      template: require('./templates/puppeteer-node'),
+      versions: [
+        // '15.8.0', '17.4.0',
+        '18.10.0',
+        '19.3.0',
+        'latest',
+      ],
+    },
+    {
+      name: 'lskjs/puppeteer-node',
+      template: require('./templates/puppeteer-node'),
       versions: [
         // '15.8.0', '17.4.0',
         '18.10.0',
