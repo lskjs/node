@@ -8,7 +8,7 @@ module.exports = ({ version }) =>
 FROM node:${version}
 
 RUN \\
-    ${apk({ version })} curl && \\
+    ${apk({ version })} which curl && \\
     npm i -g pnpm@7 && \\
     pnpm config set store-dir .pnpm-store
 `.trimStart();

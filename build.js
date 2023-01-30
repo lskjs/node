@@ -4,10 +4,10 @@ const { execSync } = require('child_process');
 
 execSync(`rm -rf ${buildDir}`);
 
-images.forEach(({ name, versions, template }) => {
-  versions.forEach((version) => {
-    const dockerfile = template({ version });
-    const dirname = `${buildDir}/${name.replace('/', '_')}_${version}`;
+images.forEach(({ name, template, props: variants }) => {
+  variants.forEach((props) => {
+    const dockerfile = template(props);
+    const dirname = `${buildDir}/${name.replace('/', '_')}_${props.version}`;
     execSync(`mkdir -p ${dirname}`);
     fs.writeFileSync(`${dirname}/Dockerfile`, dockerfile);
   });

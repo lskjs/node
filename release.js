@@ -23,7 +23,8 @@ fs.readdirSync(buildDir).forEach((dirname) => {
 
   const exec = (a) => {
     // eslint-disable-next-line no-console
-    console.log('>>>', a);
+    // console.log('>>>', a);
+    console.log(a);
     if (isRelease) execSync(a);
   };
   exec(`docker build -t ${imageName} ${buildDir}/${dirname}`);

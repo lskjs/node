@@ -4,46 +4,67 @@ module.exports = {
     {
       name: 'lskjs/dind',
       template: require('./templates/dind'),
-      versions: ['latest'],
+      props: [{ version: 'latest' }],
     },
     {
       name: 'lskjs/rsync',
       template: require('./templates/rsync'),
-      versions: ['3.16.0', 'latest'],
+      props: [{ version: '3.16.0' }, { version: 'latest' }],
     },
     {
       name: 'lskjs/node',
       template: require('./templates/node'),
-      versions: [
+      props: [
         // '15.8.0',
         // '17.4.0',
-        '18.10.0',
-        '18.10.0-alpine',
-        '19.3.0',
-        '19.3.0-alpine',
-        'latest',
+        { version: '18.10.0' },
+        { version: '18.10.0-alpine' },
+        { version: '19.3.0' },
+        { version: '19.3.0-alpine' },
+        { version: '19.5.0' },
+        { version: '19.5.0-alpine' },
+        { version: 'latest' },
         // 'latest-alpine',
       ],
     },
     {
-      name: 'lskjs/puppeteer-nodejs',
+      name: 'lskjs/node',
       template: require('./templates/puppeteer-node'),
-      versions: [
-        // '15.8.0', '17.4.0',
-        '18.10.0',
-        '19.3.0',
-        'latest',
+      props: [
+        {
+          version: '18.10.0-puppeteer',
+          from: `lskjs/node:18.10.0`,
+        },
+        {
+          version: '19.3.0-puppeteer',
+          from: `lskjs/node:19.3.0`,
+        },
+        {
+          version: '19.5.0-puppeteer',
+          from: `lskjs/node:19.5.0`,
+        },
       ],
     },
-    {
-      name: 'lskjs/puppeteer-node',
-      template: require('./templates/puppeteer-node'),
-      versions: [
-        // '15.8.0', '17.4.0',
-        '18.10.0',
-        '19.3.0',
-        'latest',
-      ],
-    },
+    // {
+    //   name: 'lskjs/puppeteer-nodejs',
+    //   template: require('./templates/puppeteer-node'),
+    //   props: [
+    //     // '15.8.0', '17.4.0',
+    //     { version: '18.10.0' },
+    //     { version: '19.5.0' },
+    //     { version: 'latest' },
+    //   ],
+    // },
+    // {
+    //   name: 'lskjs/puppeteer-node',
+    //   template: require('./templates/puppeteer-node'),
+    //   props: [
+    //     // '15.8.0', '17.4.0',
+    //     { version: '18.10.0' },
+    //     { version: '19.3.0' },
+    //     { version: '19.5.0' },
+    //     { version: 'latest' },
+    //   ],
+    // },
   ],
 };

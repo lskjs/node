@@ -1,4 +1,4 @@
-FROM lskjs/node:18.10.0
+FROM lskjs/node:19.5.0
 
 RUN apt-get update \
     && apt-get install -y wget gnupg ca-certificates \

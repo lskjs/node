@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
-module.exports = ({ version }) =>
+module.exports = ({ from }) =>
   `
-FROM lskjs/node:${version}
+FROM ${from}
 
 RUN apt-get update \\
     && apt-get install -y wget gnupg ca-certificates \\
