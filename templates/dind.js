@@ -1,6 +1,6 @@
-module.exports = () =>
+module.exports = ({from}) =>
   `
-FROM docker:dind
+FROM ${from}
 
 RUN apk add --update bash gettext
 

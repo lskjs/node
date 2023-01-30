@@ -1,6 +1,6 @@
-module.exports = ({ version }) =>
+module.exports = ({ from }) =>
   `
-FROM alpine:${version}
+FROM ${from}
 
 RUN apk add --no-cache \\
   openssh-client \\
