@@ -19,7 +19,7 @@ module.exports = {
       template: require('./templates/node-alpine'),
       props: [
         // '15.8.0',
-        // '17.4.0',
+        { from: 'node:17.4.0-alpine', version: '17.4.0-alpine' },
         { from: 'node:18.10.0-alpine', version: '18.10.0-alpine' },
         { from: 'node:19.3.0-alpine', version: '19.3.0-alpine' },
         { from: 'node:19.5.0-alpine', version: '19.5.0-alpine' },
@@ -32,6 +32,7 @@ module.exports = {
       props: [
         // '15.8.0',
         // '17.4.0',
+        { from: 'node:17.4.0', version: '17.4.0' },
         { from: 'node:18.10.0', version: '18.10.0' },
         { from: 'node:19.3.0', version: '19.3.0' },
         { from: 'node:19.5.0', version: '19.5.0' },
