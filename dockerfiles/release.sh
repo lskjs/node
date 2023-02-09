@@ -36,6 +36,4 @@ docker build -t lskjs/rsync:3.16.0 dockerfiles/lskjs_rsync_3.16.0 && \
 docker push lskjs/rsync:3.16.0 && \
 docker build -t lskjs/rsync:latest dockerfiles/lskjs_rsync_latest && \
 docker push lskjs/rsync:latest && \
-docker build -t undefined:undefined dockerfiles/release.sh && \
-docker push undefined:undefined && \
 echo FINISH

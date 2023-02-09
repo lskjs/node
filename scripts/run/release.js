@@ -19,6 +19,7 @@ async function main({ args }) {
       } else if (chunks.length === 2) {
         [name, version] = chunks;
       } else {
+        return [];
         // throw new Error('Invalid dirname');
       }
       const imageName = group ? `${group}/${name}:${version}` : `${name}:${version}`;
