@@ -47,6 +47,27 @@ module.exports = {
         { from: `lskjs/node:19.5.0`, version: '19.5.0-puppeteer' },
       ],
     },
+    {
+      name: 'lskjs/node',
+      template: require('./templates/node-clickhouse'),
+      props: [
+        {
+          from: `lskjs/node:17.4.0`,
+          version: '17.4.0-clickhouse-20.8.2.3',
+          clickhouseVersion: '20.8.2.3',
+        },
+        {
+          from: `lskjs/node:19.5.0`,
+          version: '19.5.0-clickhouse-20.8.2.3',
+          clickhouseVersion: '20.8.2.3',
+        },
+        {
+          from: `lskjs/node:19.5.0`,
+          version: '19.5.0-clickhouse',
+          clickhouseVersion: '20.8.2.3',
+        },
+      ],
+    },
     // {
     //   name: 'lskjs/puppeteer-nodejs',
     //   template: require('./templates/puppeteer-node'),
