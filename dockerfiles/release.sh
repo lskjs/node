@@ -28,6 +28,14 @@ docker build -t lskjs/node:19.5.0-clickhouse-20.8.2.3 dockerfiles/lskjs_node_19.
 docker push lskjs/node:19.5.0-clickhouse-20.8.2.3 && \
 docker build -t lskjs/node:19.5.0-puppeteer dockerfiles/lskjs_node_19.5.0-puppeteer && \
 docker push lskjs/node:19.5.0-puppeteer && \
+docker build -t lskjs/node:20.2.0 dockerfiles/lskjs_node_20.2.0 && \
+docker push lskjs/node:20.2.0 && \
+docker build -t lskjs/node:20.2.0-alpine dockerfiles/lskjs_node_20.2.0-alpine && \
+docker push lskjs/node:20.2.0-alpine && \
+docker build -t lskjs/node:20.2.0-clickhouse dockerfiles/lskjs_node_20.2.0-clickhouse && \
+docker push lskjs/node:20.2.0-clickhouse && \
+docker build -t lskjs/node:20.2.0-puppeteer dockerfiles/lskjs_node_20.2.0-puppeteer && \
+docker push lskjs/node:20.2.0-puppeteer && \
 docker build -t lskjs/node:latest dockerfiles/lskjs_node_latest && \
 docker push lskjs/node:latest && \
 docker build -t lskjs/node:latest-alpine dockerfiles/lskjs_node_latest-alpine && \

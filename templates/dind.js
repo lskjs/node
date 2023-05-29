@@ -1,4 +1,4 @@
-module.exports = ({from}) =>
+module.exports = ({ from }) =>
   `
 FROM ${from}
 
