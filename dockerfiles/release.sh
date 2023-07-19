@@ -1,5 +1,9 @@
 docker build -t lskjs/dind:latest dockerfiles/lskjs_dind_latest && \
 docker push lskjs/dind:latest && \
+docker build -t lskjs/kubectl:1.27 dockerfiles/lskjs_kubectl_1.27 && \
+docker push lskjs/kubectl:1.27 && \
+docker build -t lskjs/kubectl:latest dockerfiles/lskjs_kubectl_latest && \
+docker push lskjs/kubectl:latest && \
 docker build -t lskjs/node:17.4.0 dockerfiles/lskjs_node_17.4.0 && \
 docker push lskjs/node:17.4.0 && \
 docker build -t lskjs/node:17.4.0-alpine dockerfiles/lskjs_node_17.4.0-alpine && \

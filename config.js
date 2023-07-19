@@ -7,6 +7,14 @@ module.exports = {
       props: [{ from: 'docker:dind', version: 'latest' }],
     },
     {
+      name: 'lskjs/kubectl',
+      template: require('./templates/kubectl'),
+      props: [
+        { from: 'bitnami/kubectl:latest', version: 'latest' },
+        { from: 'bitnami/kubectl:1.27', version: '1.27' },
+      ],
+    },
+    {
       name: 'lskjs/rsync',
       template: require('./templates/rsync'),
       props: [

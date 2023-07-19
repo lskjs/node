@@ -17,6 +17,27 @@ deploy:
     - envsubst < docker-stack.yml > docker-stack.yml.${CI_COMMIT_SHORT_SHA}
     - docker stack deploy --with-registry-auth --compose-file=./docker-stack.yml.${CI_COMMIT_SHORT_SHA} ${DOCKER_SERVICE}
 ```
+# @lskjs/kubctl
+
+Like a dind but with kubectl.
+
+## using from GitLab CI
+
+```yml
+deploy:
+  stage: deploy
+  image: lskjs/dind
+  script:
+    - docker login -u ${DOCKER_REGISTRY_USER} -p ${DOCKER_REGISTRY_PASS} ${DOCKER_REGISTRY}
+    - docker build -t ${DOCKER_IMAGE} ${DOCKER_FILE}
+    - docker tag ${DOCKER_IMAGE} ${DOCKER_TAG}
+    - docker push ${DOCKER_IMAGE}
+    - docker push ${DOCKER_TAG}
+    - kubectl create secret generic prod-kit --from-file=${prod_env_file} --from-file=${prod_env_js} --save-config --dry-run=client -o yaml | kubectl apply -f -
+    - envsubst < deploy/k8s-deploy.yaml > deploy.yaml.${CI_COMMIT_SHORT_SHA}
+    - kubectl apply -f ./deploy.yaml.${CI_COMMIT_SHORT_SHA}
+
+```
 
 ## using from docker
 
