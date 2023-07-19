@@ -1,4 +1,11 @@
+# Deprecated
+
+Project moved to another repo [https://github.com/lskjs/docker](https://github.com/lskjs/docker)
+
+
 # @lskjs/dind
+
+
 
 A little docker image based on `docker:dind` with envsubst and bash. Default shell is bash.
 
